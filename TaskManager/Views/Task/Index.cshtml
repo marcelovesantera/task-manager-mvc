@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TaskManager.Models.TaskItem>
+
+@{
+    ViewData["Title"] = "Lista de Tarefas";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nova Tarefa</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Concluído</th>
+            <th>Data de Criação</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.Id</td>
+                <td>@task.Name</td>
+                <td>@task.Description</td>
+                <td>@(task.IsCompleted ? "Sim" : "Não")</td>
+                <td>@task.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@task.Id" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@task.Id" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
