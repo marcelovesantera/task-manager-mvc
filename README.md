@@ -50,16 +50,16 @@ dotnet run
 
 # Task Manager (ASP.NET Core MVC) - English Version
 
-## 📌 About the Project
+## About the Project
 **Task Manager** is a web application built with **ASP.NET Core MVC** that allows users to manage tasks with full **CRUD (Create, Read, Update, Delete)** functionalities.
 
-## 🚀 Technologies Used
+## Technologies Used
 - **ASP.NET Core MVC** (.NET 8)
 - **Entity Framework Core** (EF Core)
 - **SQL Server**
 - **Bootstrap 5** (for styling)
 
-## 📥 How to Run the Project
+## How to Run the Project
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/marcelovesantera/task-manager-mvc.git
