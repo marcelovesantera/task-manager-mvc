@@ -1,215 +1,101 @@
-# GameStore API
+# Task Manager (ASP.NET Core MVC)
 
-GameStore API é uma API RESTful desenvolvida com **ASP.NET Core 8.0** e **Entity Framework Core** para gerenciar jogos e gêneros. Ela utiliza **SQLite** como banco de dados e Minimal APIs para definição simples e direta de endpoints.
+## 📌 Sobre o Projeto
+O **Task Manager** é uma aplicação web desenvolvida em **ASP.NET Core MVC** que permite gerenciar tarefas com funcionalidades de **CRUD (Create, Read, Update, Delete)**.
 
-## Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
+- **ASP.NET Core MVC** (.NET 8)
+- **Entity Framework Core** (EF Core)
+- **SQL Server**
+- **Bootstrap 5** (para estilização)
 
-- **ASP.NET Core 8.0**
-- **Entity Framework Core 9.0.2**
-- **SQLite**
-- **Minimal APIs**
-
-## Funcionalidades
-
-- Gerenciamento de Jogos
-  - Criar, listar, atualizar e excluir jogos
-- Gerenciamento de Gêneros
-  - Criar, listar, atualizar e excluir gêneros
-
-## Estrutura do Projeto
-
-```
-GameStore.API/
-│-- Data/
-│   ├── Migrations/
-│   ├── GameStoreContext.cs
-│   ├── DataExtensions.cs
-│-- Dtos/
-│   ├── CreateGameDto.cs
-│   ├── CreateGenreDto.cs
-│   ├── GameDetailsDto.cs
-│   ├── GameSummaryDto.cs
-│   ├── GenreDto.cs
-│   ├── UpdateGameDto.cs
-│   ├── UpdateGenreDto.cs
-│-- Endpoints/
-│   ├── GamesEndpoints.cs
-│   ├── GenresEndpoints.cs
-│-- Entities/
-│   ├── Game.cs
-│   ├── Genre.cs
-│-- Mapping/
-│   ├── GameMapping.cs
-│   ├── GenreMapping.cs
-│-- appsettings.json
-│-- appsettings.Development.json
-│-- games.http
-│-- GameStore.db
-│-- Program.cs
+## 📥 Como Rodar o Projeto
+### 1️⃣ Clone o Repositório
+```bash
+git clone https://github.com/seu-usuario/TaskManager.git
+cd TaskManager
 ```
 
-## Como Executar o Projeto
-
-### 1. Clonar o Repositório
-
-```sh
-git clone https://github.com/seu-usuario/GameStore.API.git
-cd GameStore.API
-```
-
-### 2. Configurar o Banco de Dados
-
-Certifique-se de que a string de conexão em `appsettings.json` está corretamente configurada:
-
+### 2️⃣ Configure a Connection String no `appsettings.json`
 ```json
 "ConnectionStrings": {
-  "GameStore": "Data Source=GameStore.db"
+    "DefaultConnection": "Server=SEU_SERVIDOR;Database=TaskManagerDB;User Id=SEU_USUARIO;Password=SUA_SENHA;TrustServerCertificate=True;"
 }
 ```
 
-### 3. Restaurar Dependências
-
-```sh
+### 3️⃣ Instale as Dependências
+```bash
 dotnet restore
 ```
 
-### 4. Aplicar Migrações e Inicializar o Banco de Dados
-
-```sh
+### 4️⃣ Rode as Migrations
+```bash
+# Criar a estrutura do banco de dados
 dotnet ef database update
 ```
 
-### 5. Executar a API
-
-```sh
+### 5️⃣ Execute a Aplicação
+```bash
 dotnet run
 ```
 
-A API estará disponível em `http://localhost:5086`.
+Acesse no navegador: `https://localhost:5001/Task`
 
-## Endpoints Disponíveis
-
-### Jogos
-
-- `GET /games` - Listar todos os jogos
-- `GET /games/{id}` - Obter um jogo por ID
-- `POST /games` - Adicionar um novo jogo
-- `PUT /games/{id}` - Atualizar um jogo existente
-- `DELETE /games/{id}` - Remover um jogo
-
-### Gêneros
-
-- `GET /genres` - Listar todos os gêneros
-- `GET /genres/{id}` - Obter um gênero por ID
-- `POST /genres` - Adicionar um novo gênero
-- `PUT /genres/{id}` - Atualizar um gênero existente
-- `DELETE /genres/{id}` - Remover um gênero
+## 📌 Funcionalidades
+✅ Criar novas tarefas
+✅ Listar todas as tarefas
+✅ Editar tarefas existentes
+✅ Marcar tarefas como concluídas
+✅ Excluir tarefas
 
 ---
 
-# GameStore API
+# Task Manager (ASP.NET Core MVC) - English Version
 
-GameStore API is a RESTful API developed with **ASP.NET Core 8.0** and **Entity Framework Core** to manage games and genres. It uses **SQLite** as the database and Minimal APIs for simple and direct endpoint definitions.
+## 📌 About the Project
+**Task Manager** is a web application built with **ASP.NET Core MVC** that allows users to manage tasks with full **CRUD (Create, Read, Update, Delete)** functionalities.
 
-## Technologies Used
+## 🚀 Technologies Used
+- **ASP.NET Core MVC** (.NET 8)
+- **Entity Framework Core** (EF Core)
+- **SQL Server**
+- **Bootstrap 5** (for styling)
 
-- **ASP.NET Core 8.0**
-- **Entity Framework Core 9.0.2**
-- **SQLite**
-- **Minimal APIs**
-
-## Features
-
-- Game Management
-  - Create, list, update, and delete games
-- Genre Management
-  - Create, list, update, and delete genres
-
-## Project Structure
-
-```
-GameStore.API/
-│-- Data/
-│   ├── Migrations/
-│   ├── GameStoreContext.cs
-│   ├── DataExtensions.cs
-│-- Dtos/
-│   ├── CreateGameDto.cs
-│   ├── CreateGenreDto.cs
-│   ├── GameDetailsDto.cs
-│   ├── GameSummaryDto.cs
-│   ├── GenreDto.cs
-│   ├── UpdateGameDto.cs
-│   ├── UpdateGenreDto.cs
-│-- Endpoints/
-│   ├── GamesEndpoints.cs
-│   ├── GenresEndpoints.cs
-│-- Entities/
-│   ├── Game.cs
-│   ├── Genre.cs
-│-- Mapping/
-│   ├── GameMapping.cs
-│   ├── GenreMapping.cs
-│-- appsettings.json
-│-- appsettings.Development.json
-│-- games.http
-│-- GameStore.db
-│-- Program.cs
+## 📥 How to Run the Project
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/TaskManager.git
+cd TaskManager
 ```
 
-## How to Run the Project
-
-### 1. Clone the Repository
-
-```sh
-git clone https://github.com/your-username/GameStore.API.git
-cd GameStore.API
-```
-
-### 2. Configure the Database
-
-Ensure the connection string in `appsettings.json` is correctly set:
-
+### 2️⃣ Configure the Connection String in `appsettings.json`
 ```json
 "ConnectionStrings": {
-  "GameStore": "Data Source=GameStore.db"
+    "DefaultConnection": "Server=YOUR_SERVER;Database=TaskManagerDB;User Id=YOUR_USER;Password=YOUR_PASSWORD;TrustServerCertificate=True;"
 }
 ```
 
-### 3. Restore Dependencies
-
-```sh
+### 3️⃣ Install Dependencies
+```bash
 dotnet restore
 ```
 
-### 4. Apply Migrations and Initialize the Database
-
-```sh
+### 4️⃣ Run the Migrations
+```bash
+# Create the database structure
 dotnet ef database update
 ```
 
-### 5. Run the API
-
-```sh
+### 5️⃣ Run the Application
+```bash
 dotnet run
 ```
 
-The API will be available at `http://localhost:5086`.
+Open your browser and access: `https://localhost:5001/Task`
 
-## Available Endpoints
-
-### Games
-
-- `GET /games` - List all games
-- `GET /games/{id}` - Get a game by ID
-- `POST /games` - Add a new game
-- `PUT /games/{id}` - Update an existing game
-- `DELETE /games/{id}` - Remove a game
-
-### Genres
-
-- `GET /genres` - List all genres
-- `GET /genres/{id}` - Get a genre by ID
-- `POST /genres` - Add a new genre
-- `PUT /genres/{id}` - Update an existing genre
-- `DELETE /genres/{id}` - Remove a genre
+## 📌 Features
+✅ Create new tasks
+✅ List all tasks
+✅ Edit existing tasks
+✅ Mark tasks as completed
+✅ Delete tasks
