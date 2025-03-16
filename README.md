@@ -12,7 +12,7 @@ O **Task Manager** é uma aplicação web desenvolvida em **ASP.NET Core MVC** q
 ## 📥 Como Rodar o Projeto
 ### 1️⃣ Clone o Repositório
 ```bash
-git clone https://github.com/seu-usuario/TaskManager.git
+git clone https://github.com/marcelovesantera/TaskManager.git
 cd TaskManager
 ```
 
@@ -64,7 +64,7 @@ Acesse no navegador: `https://localhost:5001/Task`
 ## 📥 How to Run the Project
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/TaskManager.git
+git clone https://github.com/marcelovesantera/TaskManager.git
 cd TaskManager
 ```
 
